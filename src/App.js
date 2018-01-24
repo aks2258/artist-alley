@@ -11,7 +11,6 @@ const App = () =>
   <Router>
     <div>
       <Switch>
-      	
         <Route exact path="/" component={ProfilePage} />
       </Switch>
     </div>

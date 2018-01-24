@@ -3,7 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Link } from "react-router";
 //For the AppBar
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import Theme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 
@@ -12,7 +12,7 @@ import "./App.css";
 
 injectTapEventPlugin();
 
-class SignUp extends Component {
+class SignUp extends React.Component {
   state = {
     fields: {}
   };
@@ -28,13 +28,8 @@ class SignUp extends Component {
 
   render() {
     return (
-      // const ProfilePage = () => (
-      //   <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-      //     <AppBar title="Artist Alley" />
-      //   </MuiThemeProvider>
-      // );
       <MuiThemeProvider>
-        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+        <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
           <AppBar title="Artist Alley" />
         </MuiThemeProvider>
         <div className="App">
