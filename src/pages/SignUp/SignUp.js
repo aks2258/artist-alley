@@ -29,9 +29,6 @@ class SignUp extends React.Component {
   render() {
     return (
       <MuiThemeProvider>
-        <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
-          <AppBar title="Artist Alley" />
-        </MuiThemeProvider>
         <div className="App">
           <Form onChange={fields => this.onChange(fields)} />
           <p>
