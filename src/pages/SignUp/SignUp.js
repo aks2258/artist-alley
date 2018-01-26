@@ -31,9 +31,6 @@ class SignUp extends React.Component {
       <MuiThemeProvider>
         <div className="App">
           <Form onChange={fields => this.onChange(fields)} />
-          <p>
-            {JSON.stringify(this.state.fields, null, 2)}
-          </p>
         </div>
       </MuiThemeProvider>
     );
