@@ -10,7 +10,6 @@ class ProfilePage extends React.Component {
 	  render() {
     	return (
 		  <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
-		    <AppBar title="Artist Alley" />
 		    	<Card>
 				    <CardHeader
 				      title="Rob Prior"
@@ -37,5 +36,5 @@ class ProfilePage extends React.Component {
 		);
 	}
 }
-
+//add an about me, fix appbar navigation, appbar on all pages
 export default ProfilePage;

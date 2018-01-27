@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-
+//For Appbar
+import Theme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import AppBar from 'material-ui/AppBar';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+///////////////////////////////////////////////////////////////////
 
 export default class ArtistPage extends Component {
 
@@ -20,8 +25,8 @@ export default class ArtistPage extends Component {
   loadResults = () => {
     this.setState({artists:[
       {
-        name: "Rob Prior",
-        specialties: "Painter, Illustrator",
+        name: "Marco Rudy",
+        specialties: "Artist",
         comment: "Testing"
       },
       {
@@ -34,6 +39,9 @@ export default class ArtistPage extends Component {
 
   render() {
     return (
+      <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
+        <AppBar title="Artist Alley" />
+      </MuiThemeProvider>,
       this.state.artists.map(artist =>(
           <Card>
             <CardHeader

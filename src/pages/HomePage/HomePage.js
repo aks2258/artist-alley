@@ -94,11 +94,12 @@ export default class HomePage extends Component {
 					value = {this.state.password}
           			errorText={this.state.passwordError} />
 					<br />
-					<RaisedButton component ={Link} to ="/ProfilePage" label="Login" onClick={e => this.onSubmit(e)} primary />
+					<RaisedButton component = {Link} to ="/ProfilePage" label="Login" onClick={e => this.onSubmit(e)} primary />
 				</div>
 				<br/>
 				<div className = "signUpButton">
-					<RaisedButton component={Link} to="/SignUp" primary label= "Sign Up">
+					<RaisedButton primary label= "Sign Up">
+						<Link to = "/SignUp"/>
 					</RaisedButton>
 				</div>
 			</MuiThemeProvider>
